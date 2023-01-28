@@ -9,7 +9,7 @@ export const AppointmentsPage = (props) => {
 
   // Define state variables for appointment info
   const [title, setTitle] = useState("");
-  const [contact, setContact] = useState("");
+  const [contact, setContact] = useState(contacts.lentgt > 0 ? contacts[0].name : "");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
 

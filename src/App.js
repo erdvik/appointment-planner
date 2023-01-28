@@ -7,7 +7,7 @@ import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 function App() {
   
   //Define state variables for contacts and appointments 
-  const [contacts, setContacts] = useState([{name: "Chris", phone: "1234567890", email: "test@124.no"}]);
+  const [contacts, setContacts] = useState([]);
   const [appointments, setAppointments] = useState([]);
 
   const ROUTES = {
@@ -43,7 +43,7 @@ function App() {
             <ContactsPage contacts={contacts} addContact={addContact}/>
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
-            <AppointmentsPage appointments={appointments} addAppointment={addAppointment}/>
+            <AppointmentsPage appointments={appointments} addAppointment={addAppointment} contacts={contacts} />
           </Route>
         </Switch>
       </main>
