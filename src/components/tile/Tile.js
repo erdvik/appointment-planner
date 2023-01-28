@@ -1,17 +1,13 @@
 import React from "react";
 
-export const Tile = (props) => {
-  const contactEntries = Object.entries(props.contact);
+export const Tile = ({ tile }) => {
   return (
     <div className="tile-container">
-      {contactEntries.map(([key, value], index) => {
-        if (index === 0) {
-          return <p className="tile-tile" key={key}>{key}: {value}</p>;
-        } else {
-          return <p className="tile" key={key}>{key}: {value}</p>;
-        }
-      }
-      )}
+      {Object.values(tile).map((value, index) => (
+        <p key={index} className={`${index === 0 ? "tile-title" : ""} tile`}>
+          {value}
+        </p>
+      ))}
     </div>
   );
 };
