@@ -22,7 +22,7 @@ export const ContactForm = ({
         placeholder="Phone"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
-        pattern="^(?:(?:\\+|00)47)?[13-9]\\d{7}$"
+        // pattern="^(?:(?:\\+|00)47)?[13-9]\\d{7}$"
       />
       <input
         type="email"

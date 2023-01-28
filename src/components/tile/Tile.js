@@ -1,13 +1,14 @@
 import React from "react";
 
 export const Tile = (props) => {
+  const contactEntries = Object.entries(props.contact);
   return (
     <div className="tile-container">
-      {props.contact.map((value, index) => {
+      {contactEntries.map(([key, value], index) => {
         if (index === 0) {
-          return <p className="tile-tile" key={index}>{value}</p>;
+          return <p className="tile-tile" key={key}>{key}: {value}</p>;
         } else {
-          return <p className="tile" key={index}>{value}</p>;
+          return <p className="tile" key={key}>{key}: {value}</p>;
         }
       }
       )}
